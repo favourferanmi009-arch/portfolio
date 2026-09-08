@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #0b0b0b;
+    color: white;
+    line-height: 1.6;
+}
+
+
+    /* NAVBAR */
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #b8ff00;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b8ff00;
+}
+
+.menu-btn {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 25px;
+}
+
+
+/* Hero      */
+
+.hero {
+    max-width: 1200px;
+    min-height: 550px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 220px;
+
+    align-items: center;
+
+    padding: 60px 30px;
+}
+
+.small-title {
+    color: #777;
+    font-size: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.05;
+
+    margin: 10px 0 25px;
+}
+
+.hero h1 span {
+    color: #b8ff00;
+}
+
+.description {
+    max-width: 450px;
+
+    color: #888;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #b8ff00;
+    color: #000;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(184, 255, 0, 0.2);
+}
+
+.secondary {
+    color: white;
+}
+
+.secondary:hover {
+    color: #b8ff00;
+}
+
+
+/* ================= PROFILE ================= */
+
+.profile-container {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.green-circle {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: #b8ff00;
+    border-radius: 30px;
+    right: 10px;
+}
+
+.profile-image {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    border-radius: 30px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.stat {
+    background: #050505;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    border: 1px solid #151515;
+}
+
+.stat strong {
+    color: #b8ff00;
+
+    font-size: 18px;
+}
+
+.stat p {
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 60px 40px;
+
+    background: #050505;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.section-label {
+    color: #666;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.about h2,
+.experience h2,
+.projects h2,
+.contact h2 {
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.about h2 span,
+.experience h2 span,
+.projects h2 span,
+.contact h2 span {
+    color: #b8ff00;
+}
+
+.about p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.skills div {
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+.skills span {
+    color: #b8ff00;
+
+    margin-right: 8px;
+}
+
+
+/* CONTACT CARDS */
+
+.contact-cards {
+    display: flex;
+
+    gap: 10px;
+}
+
+.contact-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #151515;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+}
+
+.contact-card .icon {
+    color: #b8ff00;
+}
+
+.contact-card small {
+    color: #666;
+
+    font-size: 9px;
+}
+
+.contact-card p {
+    color: white;
+
+    font-size: 10px;
+}
+
+
+/* ABOUT IMAGE */
+
+.about-image {
+    position: relative;
+    width: 330px;
+    height: 334px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 330px;
+    height: 334px;
+    object-fit: cover;
+}
+
+.image-tag {
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    background: white;
+    color: #111;    
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 10px;
+}
+
+.image-tag span {
+    color: #b8ff00;
+}
+
+.image-tag.second {
+    bottom: 10px;
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.experience {
+    max-width: 1100px;
+
+    margin: 100px auto;
+
+    padding: 0 40px;
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.experience-icon {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #151515;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #b8ff00;
+
+    font-size: 50px;
+
+    border: 1px solid #252525;
+}
+
+
+/* EXPERIENCE BOX */
+
+.experience-box {
+    background: #151515;
+
+    border-radius: 8px;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.experience-item {
+    display: flex;
+
+    gap: 15px;
+}
+
+.number {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #080808;
+
+    color: #777;
+
+    font-size: 9px;
+}
+
+.experience-item small {
+    color: #666;
+
+    font-size: 9px;
+}
+
+.experience-item h3 {
+    font-size: 12px;
+
+    margin: 3px 0;
+}
+
+.experience-item p {
+    color: #666;
+
+    font-size: 10px;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    max-width: 1100px;
+
+    margin: 100px auto;
+
+    padding: 0 40px;
+}
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    background: #151515;
+
+    padding: 30px;
+
+    min-height: 180px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border: 1px solid #b8ff00;
+}
+
+.project-number {
+    color: #b8ff00;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.project-card h3 {
+    margin: 20px 0 5px;
+}
+
+.project-card p {
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: #050505;
+}
+
+.contact p {
+    color: #777;
+
+    max-width: 500px;
+
+    margin: 0 auto 30px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #111;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px;
+
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 40px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-container {
+        margin: 50px auto 20px;
+    }
+
+    .stats {
+        flex-direction: row;
+
+        justify-content: center;
+
+        margin-top: 30px;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+
+        margin: 30px 15px;
+
+        padding: 30px 20px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+
+    .experience {
+        grid-template-columns: 1fr;
+
+        margin: 60px auto;
+
+        padding: 0 20px;
+    }
+
+    .experience-icon {
+        margin: auto;
+    }
+
+    .experience-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    .projects {
+        padding: 0 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
